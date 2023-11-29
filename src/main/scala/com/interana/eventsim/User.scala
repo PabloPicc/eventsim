@@ -72,6 +72,7 @@ class User(val alpha: Double,
      */
     if (session.currentState.page=="NextSong")
       m += (
+        "song_id" -> session.currentSong.get._1,   
         "artist" -> session.currentSong.get._2,
         "song" -> session.currentSong.get._3,
         "length" -> session.currentSong.get._4
